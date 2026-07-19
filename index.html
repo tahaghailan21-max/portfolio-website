@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Taha Ghailan, Software Engineer. Full-stack development with Java, Spring Boot, Angular, React and the Axelor ERP framework. Based in Morocco.">
+<title>Taha Ghailan · Software Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>
+  (function () {
+    var saved = localStorage.getItem("theme");
+    var theme = saved || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+    document.documentElement.dataset.theme = theme;
+  })();
+</script>
+</head>
+<body>
+
+<nav class="nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#top">taha.ghailan<span class="tld">()</span></a>
+    <div class="nav-right">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" data-i18n="nav.about">About</a></li>
+        <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+        <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+        <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+        <li><a href="#beyond" data-i18n="nav.beyond">Beyond code</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+      <div class="nav-controls">
+        <div class="lang-menu" id="langMenu">
+          <button type="button" class="lang-current" id="langBtn" aria-haspopup="listbox" aria-expanded="false" aria-label="Change language" data-i18n-aria="a11y.lang">
+            <img id="langFlag" src="assets/icons/flags/en.png" alt="" width="20" height="14">
+            <span id="langCode">EN</span>
+            <span class="caret" aria-hidden="true">▾</span>
+          </button>
+          <ul class="lang-list" id="langList" role="listbox" aria-label="Languages">
+            <li><button type="button" data-lang="en" role="option" aria-selected="true"><img src="assets/icons/flags/en.png" alt="" width="20" height="14"> English</button></li>
+            <li><button type="button" data-lang="fr" role="option" aria-selected="false"><img src="assets/icons/flags/fr.png" alt="" width="20" height="14"> Français</button></li>
+            <li><button type="button" data-lang="es" role="option" aria-selected="false"><img src="assets/icons/flags/es.png" alt="" width="20" height="14"> Español</button></li>
+          </ul>
+        </div>
+        <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle dark / light theme" data-i18n-aria="a11y.theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">menu</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-glow glow-a" aria-hidden="true"></div>
+  <div class="hero-glow glow-b" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-text">
+      <p class="badge"><span class="pulse" aria-hidden="true"></span><span data-i18n="hero.badge">Available for junior roles · Morocco</span></p>
+      <div class="name-row">
+        <img class="hero-avatar" src="assets/personal-photo.png" alt="Taha Ghailan">
+        <h1 class="hero-name">Taha Ghailan</h1>
+      </div>
+      <p class="role" data-i18n="hero.role">Software Engineer · Full-Stack</p>
+      <p class="pitch" data-i18n="hero.pitch">I build full-stack software that survives contact with production: <strong>ERP backends, real-time data platforms, and the AI tooling that connects them</strong>.</p>
+      <div class="hero-actions">
+        <button type="button" class="btn btn-primary" id="cvView" data-i18n="hero.cv">View my CV</button>
+        <a class="btn btn-icon" href="assets/cv.pdf" download="Taha_Ghailan_CV.pdf" aria-label="Download CV" data-i18n-aria="a11y.download">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </a>
+        <a class="btn btn-ghost" href="#contact" data-i18n="hero.contact">Get in touch</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section id="about" class="wrap reveal">
+  <div class="section-head"><span class="eyebrow"><span class="slashes">//</span> <span data-i18n="sec.about">about</span></span></div>
+  <div class="about-body">
+    <p data-i18n="about.p1">I'm a software engineer fresh out of ENSA Kénitra, wrapping up six months in Axelor's R&amp;D team, where I split my time between customizing a production ERP for real clients and building AI-assisted tooling that generates data-mapping proposals and adapts integration pipelines. That mix of shipping to production and exploring what doesn't exist yet is exactly where I want to work.</p>
+    <p data-i18n="about.p2">I go deep on problems until I actually understand them, and I'm comfortable owning a subject solo or pairing inside a team. Outside of code I train and compete in calisthenics, which taught me more about long-term consistency than any deadline ever did, and I write about what I learn on <a href="https://hashnode.com/@tahaghailan" target="_blank" rel="noopener">Hashnode</a>.</p>
+  </div>
+</section>
+
+<section id="experience" class="wrap reveal">
+  <div class="section-head"><span class="eyebrow"><span class="slashes">//</span> <span data-i18n="sec.experience">experience</span></span></div>
+  <ul class="timeline">
+    <li class="reveal-item">
+      <p class="xp-meta" data-i18n="xp1.meta">Feb 2026 – Jul 2026 · Casablanca, Morocco</p>
+      <h3 class="xp-role" data-i18n="xp1.role">R&amp;D Java Intern · <span class="xp-org">Axelor</span></h3>
+      <ul class="xp-points">
+        <li data-i18n="xp1.p1">Translated client and business needs into customizations of the Axelor Open Suite ERP: entities, views, and workflows in Java.</li>
+        <li data-i18n="xp1.p2">Developed a Claude skill that generates data-mapping proposals, validated by consultants through a React interface.</li>
+        <li data-i18n="xp1.p3">Designed Apache Hop pipeline skeletons and Claude skills that automatically adapt pipelines and workflows from validated mappings.</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">Java</span><span class="tag">Axelor Framework</span><span class="tag">React</span><span class="tag">Apache Hop</span><span class="tag">PostgreSQL</span><span class="tag">REST API</span>
+      </div>
+    </li>
+    <li class="reveal-item">
+      <p class="xp-meta" data-i18n="xp2.meta">Jun 2025 – Aug 2025 · Rabat, Morocco</p>
+      <h3 class="xp-role" data-i18n="xp2.role">Full-Stack Web Intern · <span class="xp-org">SOREC</span></h3>
+      <ul class="xp-points">
+        <li data-i18n="xp2.p1">Rebuilt a horse-racing tracking application with real-time data over WebSocket, advanced search, and secure authentication.</li>
+        <li data-i18n="xp2.p2">Developed REST APIs with Spring Boot and managed event streams through Apache Kafka.</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">Angular</span><span class="tag">Spring Boot</span><span class="tag">Spring Security</span><span class="tag">Oracle</span><span class="tag">Apache Kafka</span><span class="tag">WebSocket</span>
+      </div>
+    </li>
+    <li class="reveal-item">
+      <p class="xp-meta" data-i18n="xp3.meta">Jul 2024 – Sep 2024 · Salé, Morocco</p>
+      <h3 class="xp-role" data-i18n="xp3.role">Full-Stack Web Intern · <span class="xp-org">Jeyah</span></h3>
+      <ul class="xp-points">
+        <li data-i18n="xp3.p1">Built a complete e-commerce site: customer accounts, product catalog, and order tracking.</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">Angular</span><span class="tag">Spring</span><span class="tag">Tailwind CSS</span><span class="tag">PostgreSQL</span><span class="tag">Postman</span>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section id="skills" class="wrap reveal">
+  <div class="section-head"><span class="eyebrow"><span class="slashes">//</span> <span data-i18n="sec.skills">skills</span></span></div>
+  <div class="skills-grid">
+    <div class="skill-group reveal-item">
+      <h3>Frontend</h3>
+      <ul><li>Angular</li><li>React</li><li>TypeScript</li><li>HTML / CSS / JS</li></ul>
+    </div>
+    <div class="skill-group reveal-item">
+      <h3>Backend</h3>
+      <ul><li>Java</li><li>Spring Boot</li><li>Spring Security</li><li>PHP</li></ul>
+    </div>
+    <div class="skill-group reveal-item">
+      <h3 data-i18n="skills.db">Databases</h3>
+      <ul><li>PostgreSQL</li><li>MySQL</li><li>Oracle</li></ul>
+    </div>
+    <div class="skill-group reveal-item">
+      <h3 data-i18n="skills.tools">Tools &amp; DevOps</h3>
+      <ul><li>Git · Docker</li><li>Apache Kafka</li><li>Apache Hop</li><li>REST API · WebSocket</li><li>Postman</li></ul>
+    </div>
+    <div class="skill-group reveal-item">
+      <h3>ERP</h3>
+      <ul><li>Axelor Framework</li><li>Axelor Open Suite</li></ul>
+    </div>
+  </div>
+
+  <div class="certs">
+    <h2 class="section-title" data-i18n="certs.title">Certifications</h2>
+    <div class="certs-grid">
+      <div class="cert-card reveal-item">
+        <h4>Git Foundations Certification</h4>
+        <p class="cert-issuer" data-i18n="certs.git.sub">Version control fundamentals</p>
+        <a class="cert-link" href="assets/certs/git-foundations.pdf" target="_blank" rel="noopener"><span data-i18n="certs.view">View credential</span> ↗</a>
+      </div>
+      <div class="cert-card reveal-item">
+        <h4>Oracle Certified Professional, Java SE 17</h4>
+        <p class="cert-issuer">Oracle · OCP</p>
+        <a class="cert-link" href="assets/certs/ocp-java-se17.pdf" target="_blank" rel="noopener"><span data-i18n="certs.view">View credential</span> ↗</a>
+      </div>
+      <div class="cert-card reveal-item">
+        <h4>IELTS</h4>
+        <p class="cert-issuer" data-i18n="certs.ielts.sub">English proficiency</p>
+        <a class="cert-link" href="assets/certs/ielts.pdf" target="_blank" rel="noopener"><span class="todo">[TO FILL]</span> <span data-i18n="certs.ielts.status">obtained / in progress</span></a>
+      </div>
+      <div class="cert-card placeholder reveal-item">
+        <h4 data-i18n="certs.soon">Coming soon</h4>
+        <p class="cert-issuer" data-i18n="certs.soon.sub">Next certification in progress</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="wrap reveal">
+  <div class="section-head"><span class="eyebrow"><span class="slashes">//</span> <span data-i18n="sec.projects">projects</span></span></div>
+  <div class="projects-grid">
+
+    <article class="project-card reveal-item">
+      <p class="project-kicker" data-i18n="prj1.kicker">Final-year internship · R&amp;D</p>
+      <h3 data-i18n="prj1.title">AI-Assisted Data Mapping for ERP Integration</h3>
+      <dl class="project-block">
+        <dt data-i18n="prj.context">Context</dt>
+        <dd data-i18n="prj1.context">At Axelor, migrating client data into the ERP meant consultants hand-writing mappings and integration pipelines for every project.</dd>
+        <dt data-i18n="prj.built">What I built</dt>
+        <dd data-i18n="prj1.built">A Claude skill that proposes data mappings, a React interface where consultants validate them, and Apache Hop skeletons plus skills that adapt pipelines automatically from the validated result.</dd>
+      </dl>
+      <div class="tags">
+        <span class="tag">Java</span><span class="tag">Axelor</span><span class="tag">React</span><span class="tag">Apache Hop</span><span class="tag">PostgreSQL</span>
+      </div>
+    </article>
+
+    <article class="project-card reveal-item">
+      <p class="project-kicker" data-i18n="prj2.kicker">Internship · Real-time systems</p>
+      <h3 data-i18n="prj2.title">Horse-Racing Tracking Platform</h3>
+      <dl class="project-block">
+        <dt data-i18n="prj.context">Context</dt>
+        <dd data-i18n="prj2.context">SOREC needed its legacy race-tracking application rebuilt for live data and modern search.</dd>
+        <dt data-i18n="prj.built">What I built</dt>
+        <dd data-i18n="prj2.built">A full rebuild: real-time race updates over WebSocket backed by Kafka event streams, Spring Boot REST APIs, advanced search, and secured authentication with Spring Security.</dd>
+      </dl>
+      <div class="tags">
+        <span class="tag">Angular</span><span class="tag">Spring Boot</span><span class="tag">Kafka</span><span class="tag">WebSocket</span><span class="tag">Oracle</span>
+      </div>
+    </article>
+
+    <article class="project-card reveal-item">
+      <p class="project-kicker" data-i18n="prj3.kicker">Internship · E-commerce</p>
+      <h3 data-i18n="prj3.title">E-Commerce Platform for Jeyah</h3>
+      <dl class="project-block">
+        <dt data-i18n="prj.context">Context</dt>
+        <dd data-i18n="prj3.context">A local business needed a complete online store, end to end.</dd>
+        <dt data-i18n="prj.built">What I built</dt>
+        <dd data-i18n="prj3.built">Customer accounts, a product catalog, and order tracking: Angular on the front, Spring on the back, styled with Tailwind CSS.</dd>
+      </dl>
+      <div class="tags">
+        <span class="tag">Angular</span><span class="tag">Spring</span><span class="tag">Tailwind CSS</span><span class="tag">PostgreSQL</span>
+      </div>
+    </article>
+
+    <article class="project-card reveal-item">
+      <p class="project-kicker" data-i18n="prj4.kicker">Personal · Deployed</p>
+      <h3><a href="#projects"><span class="todo">[TAHA TRAINS URL]</span> Taha Trains</a></h3>
+      <dl class="project-block">
+        <dt data-i18n="prj.context">Context</dt>
+        <dd data-i18n="prj4.context">A personal project I designed, built, and deployed myself: my training companion on the web.</dd>
+        <dt data-i18n="prj.built">What I built</dt>
+        <dd data-i18n="prj4.built">A live website where my calisthenics side and my developer side meet: built from scratch and running in production.</dd>
+      </dl>
+      <div class="tags">
+        <span class="tag">HTML / CSS / JS</span><span class="tag" data-i18n="prj4.tag">Deployed</span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section id="beyond" class="wrap reveal">
+  <div class="section-head"><span class="eyebrow"><span class="slashes">//</span> <span data-i18n="sec.beyond">beyond code</span></span></div>
+  <div class="beyond-grid">
+    <div class="beyond-item reveal-item">
+      <h3 data-i18n="beyond.community">Community</h3>
+      <p data-i18n="beyond.community.p">Member of the Anaruz association (blood donation campaigns and environmental cleanup days) and of Arsura, where I competed in the ODA competition.</p>
+    </div>
+    <div class="beyond-item reveal-item">
+      <h3 data-i18n="beyond.sport">Competitive calisthenics</h3>
+      <p data-i18n="beyond.sport.p">I train year-round and compete. Progress in this sport is measured in months of showing up, not bursts of motivation. It's the same discipline I bring to long technical problems.</p>
+    </div>
+    <div class="beyond-item reveal-item">
+      <h3 data-i18n="beyond.writing">Writing</h3>
+      <p data-i18n="beyond.writing.p">I document what I learn, deep dives and lessons from real projects, on my <a href="https://hashnode.com/@tahaghailan" target="_blank" rel="noopener">Hashnode blog</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="wrap contact reveal">
+  <div class="section-head"><span class="eyebrow"><span class="slashes">//</span> <span data-i18n="sec.contact">contact</span></span></div>
+  <p class="lede" data-i18n="contact.lede">I'm looking for a junior developer position in Morocco. If you're building something serious and need someone who ships and keeps learning, let's talk.</p>
+  <ul class="contact-links">
+    <li><a class="mono" href="mailto:taha.ghailan21@gmail.com">
+      <img class="avatar-sm" src="assets/personal-photo.png" alt="">
+      taha.ghailan21@gmail.com</a></li>
+    <li><a href="https://www.linkedin.com/in/taha-ghailan-a47233218/" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      LinkedIn</a></li>
+    <li><a href="#contact">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+      <span class="todo">[TO FILL]</span> GitHub</a></li>
+    <li><a href="https://hashnode.com/@tahaghailan" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+      Hashnode</a></li>
+  </ul>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span>© <span id="year">2026</span> Taha Ghailan</span>
+    <span data-i18n="footer.tag">Plain HTML / CSS / JS. No frameworks.</span>
+  </div>
+</footer>
+
+<div class="cv-modal" id="cvModal" hidden role="dialog" aria-modal="true" aria-label="CV · Taha Ghailan">
+  <div class="cv-backdrop" id="cvBackdrop"></div>
+  <div class="cv-dialog">
+    <div class="cv-dialog-bar">
+      <span class="cv-dialog-title">Taha_Ghailan_CV.pdf</span>
+      <div class="cv-dialog-actions">
+        <a class="cv-bar-btn" href="assets/cv.pdf" download="Taha_Ghailan_CV.pdf" aria-label="Download CV" data-i18n-aria="a11y.download">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </a>
+        <button type="button" class="cv-bar-btn" id="cvClose" aria-label="Close" data-i18n-aria="a11y.close">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+    <iframe id="cvFrame" data-src="assets/cv.pdf" title="CV · Taha Ghailan"></iframe>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
