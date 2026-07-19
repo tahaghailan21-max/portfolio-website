@@ -49,10 +49,11 @@ const FR = {
   "skills.tools": "Outils & DevOps",
 
   "certs.title": "Certifications",
-  "certs.view": "Voir la certification",
   "certs.git.sub": "Fondamentaux du contrôle de version",
   "certs.ielts.sub": "Maîtrise de l'anglais",
-  "certs.ielts.status": "obtenu / en cours",
+  "certs.tcf.sub": "Maîtrise du français",
+  "certs.pending": "En cours",
+  "certs.done": "Obtenu",
   "certs.soon": "Bientôt",
   "certs.soon.sub": "Prochaine certification en cours",
 
@@ -139,10 +140,11 @@ const ES = {
   "skills.tools": "Herramientas & DevOps",
 
   "certs.title": "Certificaciones",
-  "certs.view": "Ver la certificación",
   "certs.git.sub": "Fundamentos del control de versiones",
   "certs.ielts.sub": "Dominio del inglés",
-  "certs.ielts.status": "obtenido / en curso",
+  "certs.tcf.sub": "Dominio del francés",
+  "certs.pending": "En curso",
+  "certs.done": "Obtenido",
   "certs.soon": "Próximamente",
   "certs.soon.sub": "Próxima certificación en curso",
 
