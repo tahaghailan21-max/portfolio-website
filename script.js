@@ -75,10 +75,10 @@ const FR = {
   "prj3.context": "Un commerce local avait besoin d'une boutique en ligne complète, de bout en bout.",
   "prj3.built": "Comptes clients, catalogue produits et suivi des commandes : Angular côté front, Spring côté back, stylé avec Tailwind CSS.",
 
-  "prj4.kicker": "Personnel · Déployé",
-  "prj4.context": "Un projet personnel conçu, développé et déployé par moi-même : mon compagnon d'entraînement sur le web.",
-  "prj4.built": "Un site en ligne où mon côté athlète et mon côté développeur se rencontrent : construit de zéro et tournant en production.",
-  "prj4.tag": "Déployé",
+  "prj4.kicker": "Personnel · En développement",
+  "prj4.context": "Un projet personnel conçu et développé par moi-même : mon compagnon d'entraînement sur le web.",
+  "prj4.built": "Une application web complète où mon côté athlète et mon côté développeur se rencontrent : Angular côté front, Spring côté back. Le déploiement est la prochaine étape.",
+  "prj4.tag": "En développement",
 
   "beyond.community": "Communauté",
   "beyond.community.p": "Membre de l'association Anaruz (campagnes de don de sang et journées de nettoyage de l'environnement) et d'Arsura, avec qui j'ai participé à la compétition ODA.",
@@ -166,10 +166,10 @@ const ES = {
   "prj3.context": "Un negocio local necesitaba una tienda online completa, de principio a fin.",
   "prj3.built": "Cuentas de clientes, catálogo de productos y seguimiento de pedidos: Angular en el front, Spring en el back, con estilos de Tailwind CSS.",
 
-  "prj4.kicker": "Personal · Desplegado",
-  "prj4.context": "Un proyecto personal que diseñé, construí y desplegué yo mismo: mi compañero de entrenamiento en la web.",
-  "prj4.built": "Un sitio en producción donde mi lado atleta y mi lado desarrollador se encuentran: construido desde cero.",
-  "prj4.tag": "Desplegado",
+  "prj4.kicker": "Personal · En desarrollo",
+  "prj4.context": "Un proyecto personal que diseñé y construí yo mismo: mi compañero de entrenamiento en la web.",
+  "prj4.built": "Una aplicación web completa donde mi lado atleta y mi lado desarrollador se encuentran: Angular en el front, Spring en el back. El despliegue es el siguiente paso.",
+  "prj4.tag": "En desarrollo",
 
   "beyond.community": "Comunidad",
   "beyond.community.p": "Miembro de la asociación Anaruz (campañas de donación de sangre y jornadas de limpieza medioambiental) y de Arsura, con la que participé en la competición ODA.",
