@@ -1,21 +1,21 @@
 /* ============ Tokens ============ */
 :root {
-  --bg: #0a0f14;
-  --surface: #10161d;
-  --surface-2: #151d26;
-  --text: #e9eef0;
-  --muted: #92a0a7;
-  --faint: #5f6c73;
-  --line: rgba(146, 170, 175, 0.15);
-  --accent: #4fd8bd;
-  --accent-2: #6aa5ff;
-  --accent-dim: rgba(79, 216, 189, 0.12);
-  --glow-a: rgba(79, 216, 189, 0.16);
-  --glow-b: rgba(106, 165, 255, 0.10);
-  --dot: rgba(146, 170, 175, 0.14);
+  --bg: #060e1c;
+  --surface: #0c1830;
+  --surface-2: #11213c;
+  --text: #e6f1ff;
+  --muted: #94a8c3;
+  --faint: #5f7392;
+  --line: rgba(100, 140, 190, 0.18);
+  --accent: #58a6ff;
+  --accent-2: #7ee0ff;
+  --accent-dim: rgba(88, 166, 255, 0.12);
+  --glow-a: rgba(88, 166, 255, 0.14);
+  --glow-b: rgba(126, 224, 255, 0.09);
+  --dot: rgba(100, 140, 190, 0.15);
   --shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
-  --nav-bg: rgba(10, 15, 20, 0.8);
-  --backdrop: rgba(4, 8, 11, 0.65);
+  --nav-bg: rgba(6, 14, 28, 0.8);
+  --backdrop: rgba(3, 8, 17, 0.68);
   --font-display: "Sora", "Segoe UI", sans-serif;
   --font-body: "Manrope", "Segoe UI", sans-serif;
   --font-mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
@@ -23,23 +23,24 @@
 }
 
 :root[data-theme="light"] {
-  --bg: #f3f6f6;
+  --bg: #f2f6fb;
   --surface: #ffffff;
-  --surface-2: #eef3f3;
-  --text: #14201f;
-  --muted: #52626a;
-  --faint: #7d8b91;
-  --line: rgba(20, 50, 50, 0.13);
-  --accent: #0b8f75;
-  --accent-2: #3963c9;
-  --accent-dim: rgba(11, 143, 117, 0.10);
-  --glow-a: rgba(11, 143, 117, 0.13);
-  --glow-b: rgba(57, 99, 201, 0.09);
-  --dot: rgba(20, 50, 50, 0.12);
-  --shadow: 0 14px 36px rgba(20, 50, 50, 0.12);
-  --nav-bg: rgba(243, 246, 246, 0.82);
-  --backdrop: rgba(30, 45, 45, 0.4);
+  --surface-2: #e9f0f8;
+  --text: #10233c;
+  --muted: #48607d;
+  --faint: #7a8da5;
+  --line: rgba(16, 50, 90, 0.14);
+  --accent: #1560bd;
+  --accent-2: #1d8ecf;
+  --accent-dim: rgba(21, 96, 189, 0.10);
+  --glow-a: rgba(21, 96, 189, 0.11);
+  --glow-b: rgba(29, 142, 207, 0.09);
+  --dot: rgba(16, 50, 90, 0.12);
+  --shadow: 0 14px 36px rgba(16, 50, 90, 0.12);
+  --nav-bg: rgba(242, 246, 251, 0.82);
+  --backdrop: rgba(20, 40, 70, 0.4);
 }
+
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -115,6 +116,7 @@ h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; }
 .nav-links a.active::after { transform: scaleX(1); }
 
 .nav-controls { display: flex; align-items: center; gap: 9px; }
+
 
 /* Language dropdown */
 .lang-menu { position: relative; }
@@ -231,7 +233,7 @@ h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; }
   object-fit: cover; object-position: 50% 25%;
   padding: 2px;
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  box-shadow: 0 8px 24px rgba(79, 216, 189, 0.2);
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--accent) 22%, transparent);
 }
 .avatar-sm {
   width: 28px; height: 28px; flex-shrink: 0; border-radius: 50%;
@@ -283,9 +285,9 @@ h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; }
 .btn:hover { text-decoration: none; transform: translateY(-2px); }
 .btn-primary {
   background: var(--accent); color: var(--bg);
-  box-shadow: 0 6px 22px rgba(79, 216, 189, 0.25);
+  box-shadow: 0 6px 22px color-mix(in srgb, var(--accent) 27%, transparent);
 }
-.btn-primary:hover { box-shadow: 0 10px 28px rgba(79, 216, 189, 0.35); }
+.btn-primary:hover { box-shadow: 0 10px 28px color-mix(in srgb, var(--accent) 38%, transparent); }
 .btn-ghost { background: none; border: 1px solid var(--line); color: var(--text); }
 .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
 .btn-icon {
