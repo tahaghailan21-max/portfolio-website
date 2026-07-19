@@ -20,12 +20,12 @@ const FR = {
   "a11y.download": "Télécharger mon CV",
   "a11y.close": "Fermer",
 
-  "sec.about": "à propos",
-  "sec.experience": "expérience",
-  "sec.skills": "compétences",
-  "sec.projects": "projets",
-  "sec.beyond": "au-delà du code",
-  "sec.contact": "contact",
+  "sec.about": "À propos",
+  "sec.experience": "Expérience",
+  "sec.skills": "Compétences",
+  "sec.projects": "Projets",
+  "sec.beyond": "Au-delà du code",
+  "sec.contact": "Contact",
 
   "about.p1": "Je suis ingénieur logiciel fraîchement diplômé de l'ENSA de Kénitra, au terme de six mois dans l'équipe R&D d'Axelor, où je partageais mon temps entre la personnalisation d'un ERP en production pour de vrais clients et la construction d'outils assistés par IA qui génèrent des propositions de mapping de données et adaptent des pipelines d'intégration. Ce mélange de mise en production et d'exploration de ce qui n'existe pas encore est exactement là où je veux travailler.",
   "about.p2": "Je creuse les problèmes jusqu'à les comprendre vraiment, et je suis aussi à l'aise en autonomie qu'au sein d'une équipe. En dehors du code, je m'entraîne et je fais de la compétition en callisthénie, qui m'a appris plus sur la constance à long terme que n'importe quelle deadline, et j'écris sur ce que j'apprends sur <a href=\"https://hashnode.com/@tahaghailan\" target=\"_blank\" rel=\"noopener\">Hashnode</a>.",
@@ -110,12 +110,12 @@ const ES = {
   "a11y.download": "Descargar mi CV",
   "a11y.close": "Cerrar",
 
-  "sec.about": "sobre mí",
-  "sec.experience": "experiencia",
-  "sec.skills": "habilidades",
-  "sec.projects": "proyectos",
-  "sec.beyond": "más allá del código",
-  "sec.contact": "contacto",
+  "sec.about": "Sobre mí",
+  "sec.experience": "Experiencia",
+  "sec.skills": "Habilidades",
+  "sec.projects": "Proyectos",
+  "sec.beyond": "Más allá del código",
+  "sec.contact": "Contacto",
 
   "about.p1": "Soy un ingeniero de software recién graduado de la ENSA de Kénitra, terminando seis meses en el equipo de I+D de Axelor, donde repartía mi tiempo entre personalizar un ERP en producción para clientes reales y construir herramientas asistidas por IA que generan propuestas de mapeo de datos y adaptan pipelines de integración. Esa mezcla de poner en producción y explorar lo que aún no existe es exactamente donde quiero trabajar.",
   "about.p2": "Profundizo en los problemas hasta entenderlos de verdad, y me siento igual de cómodo trabajando solo que en equipo. Fuera del código, entreno y compito en calistenia, que me enseñó más sobre la constancia a largo plazo que cualquier deadline, y escribo sobre lo que aprendo en <a href=\"https://hashnode.com/@tahaghailan\" target=\"_blank\" rel=\"noopener\">Hashnode</a>.",
@@ -314,4 +314,21 @@ if (!reduced && "IntersectionObserver" in window) {
   revealEls.forEach((el) => observer.observe(el));
 } else {
   document.querySelectorAll(".reveal, .reveal-item").forEach((el) => el.classList.add("visible"));
+}
+
+/* ============ Active section in nav ============ */
+const navMap = {};
+document.querySelectorAll('.nav-links a[href^="#"]').forEach((a) => {
+  navMap[a.getAttribute("href").slice(1)] = a;
+});
+if ("IntersectionObserver" in window) {
+  const spy = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      Object.values(navMap).forEach((a) => a.classList.remove("active"));
+      const link = navMap[entry.target.id];
+      if (link) link.classList.add("active");
+    }
+  }, { rootMargin: "-30% 0px -60% 0px" });
+  document.querySelectorAll("main section[id]").forEach((s) => spy.observe(s));
 }
