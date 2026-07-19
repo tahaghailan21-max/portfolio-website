@@ -1,21 +1,21 @@
 /* ============ Tokens ============ */
 :root {
-  --bg: #060e1c;
-  --surface: #0c1830;
-  --surface-2: #11213c;
-  --text: #e6f1ff;
-  --muted: #94a8c3;
-  --faint: #5f7392;
-  --line: rgba(100, 140, 190, 0.18);
-  --accent: #58a6ff;
-  --accent-2: #7ee0ff;
-  --accent-dim: rgba(88, 166, 255, 0.12);
-  --glow-a: rgba(88, 166, 255, 0.14);
-  --glow-b: rgba(126, 224, 255, 0.09);
-  --dot: rgba(100, 140, 190, 0.15);
+  --bg: #0e1113;
+  --surface: #15191c;
+  --surface-2: #1b2024;
+  --text: #e8eaed;
+  --muted: #9aa4ad;
+  --faint: #667077;
+  --line: rgba(255, 255, 255, 0.10);
+  --accent: #4d9fec;
+  --accent-2: #8ab4f8;
+  --accent-dim: rgba(77, 159, 236, 0.10);
+  --glow-a: rgba(77, 159, 236, 0.09);
+  --glow-b: rgba(138, 180, 248, 0.06);
+  --dot: rgba(255, 255, 255, 0.09);
   --shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
-  --nav-bg: rgba(6, 14, 28, 0.8);
-  --backdrop: rgba(3, 8, 17, 0.68);
+  --nav-bg: rgba(14, 17, 19, 0.82);
+  --backdrop: rgba(5, 7, 8, 0.68);
   --ok: #3fb950;
   --warn: #e3b341;
   --font-display: "Sora", "Segoe UI", sans-serif;
@@ -25,22 +25,22 @@
 }
 
 :root[data-theme="light"] {
-  --bg: #f2f6fb;
+  --bg: #f7f8f9;
   --surface: #ffffff;
-  --surface-2: #e9f0f8;
-  --text: #10233c;
-  --muted: #48607d;
-  --faint: #7a8da5;
-  --line: rgba(16, 50, 90, 0.14);
-  --accent: #1560bd;
-  --accent-2: #1d8ecf;
-  --accent-dim: rgba(21, 96, 189, 0.10);
-  --glow-a: rgba(21, 96, 189, 0.11);
-  --glow-b: rgba(29, 142, 207, 0.09);
-  --dot: rgba(16, 50, 90, 0.12);
-  --shadow: 0 14px 36px rgba(16, 50, 90, 0.12);
-  --nav-bg: rgba(242, 246, 251, 0.82);
-  --backdrop: rgba(20, 40, 70, 0.4);
+  --surface-2: #eef1f3;
+  --text: #1a1d21;
+  --muted: #4d5a63;
+  --faint: #7d878e;
+  --line: rgba(20, 30, 40, 0.12);
+  --accent: #1663c7;
+  --accent-2: #3d87d6;
+  --accent-dim: rgba(22, 99, 199, 0.08);
+  --glow-a: rgba(22, 99, 199, 0.08);
+  --glow-b: rgba(61, 135, 214, 0.06);
+  --dot: rgba(20, 30, 40, 0.10);
+  --shadow: 0 14px 36px rgba(20, 30, 40, 0.10);
+  --nav-bg: rgba(247, 248, 249, 0.85);
+  --backdrop: rgba(30, 38, 44, 0.4);
   --ok: #1a7f37;
   --warn: #9a6700;
 }
